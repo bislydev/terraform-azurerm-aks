@@ -234,12 +234,6 @@ variable "api_server_subnet_id" {
   description = "(Optional) The ID of the Subnet where the API server endpoint is delegated to."
 }
 
-variable "vnet_integration_enabled" {
-  type        = bool
-  default     = false
-  description = "(Optional) Should API Server VNet Integration be enabled? For more details please visit Use API Server VNet Integration."
-}
-
 variable "attached_acr_id_map" {
   type        = map(string)
   default     = {}
@@ -1451,6 +1445,12 @@ variable "ultra_ssd_enabled" {
   type        = bool
   default     = false
   description = "(Optional) Used to specify whether the UltraSSD is enabled in the Default Node Pool. Defaults to false."
+}
+
+variable "vnet_integration_enabled" {
+  type        = bool
+  default     = false
+  description = "(Optional) Should API Server VNet Integration be enabled? For more details please visit Use API Server VNet Integration."
 }
 
 variable "vnet_subnet_id" {

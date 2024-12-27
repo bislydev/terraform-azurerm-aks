@@ -1479,3 +1479,9 @@ variable "workload_identity_enabled" {
   default     = false
   description = "Enable or Disable Workload Identity. Defaults to false."
 }
+
+variable "vnet_integration_enabled" {
+  type        = bool
+  default     = false
+  description = "(Optional) Should API Server VNet Integration be enabled? For more details please visit Use API Server VNet Integration."
+}

@@ -1444,6 +1444,12 @@ variable "ultra_ssd_enabled" {
   description = "(Optional) Used to specify whether the UltraSSD is enabled in the Default Node Pool. Defaults to false."
 }
 
+variable "vnet_integration_enabled" {
+  type        = bool
+  default     = false
+  description = "(Optional) Should API Server VNet Integration be enabled? For more details please visit Use API Server VNet Integration."
+}
+
 variable "vnet_subnet_id" {
   type        = string
   default     = null
@@ -1478,10 +1484,4 @@ variable "workload_identity_enabled" {
   type        = bool
   default     = false
   description = "Enable or Disable Workload Identity. Defaults to false."
-}
-
-variable "vnet_integration_enabled" {
-  type        = bool
-  default     = false
-  description = "(Optional) Should API Server VNet Integration be enabled? For more details please visit Use API Server VNet Integration."
 }

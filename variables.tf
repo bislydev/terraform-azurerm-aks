@@ -1563,6 +1563,12 @@ variable "workload_identity_enabled" {
   description = "Enable or Disable Workload Identity. Defaults to false."
 }
 
+variable "vnet_integration_enabled" {
+  type        = bool
+  default     = false
+  description = "(Optional) Should API Server VNet Integration be enabled? For more details please visit Use API Server VNet Integration."
+}
+
 variable "upgrade_override" {
   type = object({
     force_upgrade_enabled = bool
@@ -1574,3 +1580,4 @@ variable "upgrade_override" {
     `effective_until` - (Optional) Specifies the duration, in RFC 3339 format (e.g., `2025-10-01T13:00:00Z`), the upgrade_override values are effective. This field must be set for the `upgrade_override` values to take effect. The date-time must be within the next 30 days.
   EOT
 }
+

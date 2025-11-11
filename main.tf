@@ -275,6 +275,8 @@ resource "azurerm_kubernetes_cluster" "main" {
 
     content {
       authorized_ip_ranges = var.api_server_authorized_ip_ranges
+      subnet_id            = var.api_server_subnet_id
+      vnet_integration_enabled = var.vnet_integration_enabled
     }
   }
   dynamic "auto_scaler_profile" {

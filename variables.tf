@@ -1569,6 +1569,12 @@ variable "virtual_network_integration_enabled" {
   description = "(Optional) Should API Server VNet Integration be enabled? For more details please visit Use API Server VNet Integration."
 }
 
+variable "api_server_subnet_id" {
+  type        = string
+  default     = null
+  description = "(Optional) The ID of the Subnet where the API server endpoint is delegated to."
+}
+
 variable "upgrade_override" {
   type = object({
     force_upgrade_enabled = bool

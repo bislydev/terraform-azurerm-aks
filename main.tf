@@ -269,7 +269,7 @@ resource "azurerm_kubernetes_cluster" "main" {
     }
   }
   dynamic "api_server_access_profile" {
-    for_each = var.api_server_authorized_ip_ranges != null ? [
+    for_each = var.api_server_authorized_ip_ranges != null || var.api_server_subnet_id != null ? [
       "api_server_access_profile"
     ] : []
 
